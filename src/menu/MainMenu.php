@@ -4,7 +4,7 @@ namespace App\Menu;
 /**
 * Main Menu Class
 */
-class Menu
+class MainMenu
 {
 	protected $name_menu = 'Menu1';
 	protected $params = [];
