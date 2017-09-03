@@ -1,6 +1,8 @@
 <?php
+
+namespace App\Menu;
 /**
-* 
+* Main Menu Class
 */
 class Menu
 {
@@ -10,6 +12,6 @@ class Menu
 	{
 		$this->name_menu = $name_menu;
 		$this->params = $params;
-		$menu = new ${$this->name_menu}($params);
+		$menu = new $this->name_menu($params);
 	}
 }
