@@ -1,11 +1,11 @@
-@import url(../js/jquery.meanmenu/meanmenu.min.css);
+@import url('../js/jquery.meanmenu/meanmenu.min.css');
 
-.menu1 .menu {
+.menu1 {
     background: #02923d none repeat scroll 0 0;
     position: relative;
 }
 
-.menu1 .menu .main-menu > ul {
+.menu1 .main-menu > ul {
     display: -webkit-flex;
     justify-content: space-between;
     -moz-justify-content: space-between;
@@ -14,14 +14,14 @@
     -ms-justify-content: space-between;
 }
 
-.menu1 .menu .main-menu > ul > li {
+.menu1 .main-menu > ul > li {
     float: left;
     text-align: center;
     white-space: nowrap;
     width: 100%;
 }
 
-.menu1 .menu .main-menu > ul > li .sub-menu {
+.menu1 .main-menu > ul > li .sub-menu {
     background: #02923d none repeat scroll 0 0;
     left: 0;
     position: absolute;
@@ -31,12 +31,12 @@
     visibility: hidden;
 }
 
-.menu1 .menu .main-menu > ul > li .sub-menu .sub-menu {
+.menu1 .main-menu > ul > li .sub-menu .sub-menu {
     left: 100%;
     top: 0;
 }
 
-.menu1 .menu .main-menu > ul > li .sub-menu li .sub-menu {
+.menu1 .main-menu > ul > li .sub-menu li .sub-menu {
     background: #00a651 none repeat scroll 0 0;
     left: 100%;
     top: 0;
@@ -45,31 +45,31 @@
     width: 83%;
 }
 
-.menu1 .menu .main-menu > ul > li .sub-menu li .sub-menu li {
+.menu1 .main-menu > ul > li .sub-menu li .sub-menu li {
     float: left;
     width: 33.33%;
     overflow: hidden;
     white-space: normal;
 }
 
-.menu1 .menu .main-menu > ul > li .sub-menu li .sub-menu li:nth-child(3n+1) {
+.menu1 .main-menu > ul > li .sub-menu li .sub-menu li:nth-child(3n+1) {
     clear: left;
 }
 
-.menu1 .menu .main-menu > ul > li .sub-menu li .sub-menu li:hover {
+.menu1 .main-menu > ul > li .sub-menu li .sub-menu li:hover {
     background: #02923d none repeat scroll 0 0;
 }
 
-.menu1 .menu .main-menu > ul > li > .sub-menu > li {
+.menu1 .main-menu > ul > li > .sub-menu > li {
     text-align: left;
     width: 17%;
 }
 
-.menu1 .menu .main-menu ul li:hover {
+.menu1 .main-menu ul li:hover {
     background: #00a651 none repeat scroll 0 0;
 }
 
-.menu1 .menu .main-menu ul li:hover > .sub-menu {
+.menu1 .main-menu ul li:hover > .sub-menu {
     visibility: visible;
     animation: 0.3s ease 0s normal none 1 running fadeInUp;
     -moz-animation: 0.3s ease 0s normal none 1 running fadeInUp;
@@ -78,11 +78,11 @@
     -ms-animation: 0.3s ease 0s normal none 1 running fadeInUp;
 }
 
-.menu1 .menu .main-menu ul li:hover > a::after {
+.menu1 .main-menu ul li:hover > a::after {
     max-width: 100%;
 }
 
-.menu1 .menu .main-menu ul li a {
+.menu1 .main-menu ul li a {
     color: #ffffff;
     display: block;
     padding: 16px 10px;
@@ -91,7 +91,7 @@
     font-size: 14px;
 }
 
-.menu1 .menu .main-menu ul li a::after {
+.menu1 .main-menu ul li a::after {
     background: #ffffff none repeat scroll 0 0;
     bottom: 0;
     content: "";
@@ -107,16 +107,16 @@
     -ms-transition: max-width 0.5s ease 0s;
 }
 
-.menu1 .menu .main-menu ul ul li a {
+.menu1 .main-menu ul ul li a {
     padding: 10px 8px;
 }
 
-.menu1 .menu .main-menu ul .current-menu-item > a {
+.menu1 .main-menu ul .current-menu-item > a {
     background: #00a651 none repeat scroll 0 0;
     position: relative;
 }
 
-.menu1 .menu .main-menu ul .current-menu-item > a::before {
+.menu1 .main-menu ul .current-menu-item > a::before {
     background: #ffffff none repeat scroll 0 0;
     bottom: 0;
     content: "";
