@@ -10,14 +10,28 @@ class MainMenu
 {
 	protected $name_menu = 'Menu1';
 	public $menu;
-	function __construct($name_menu, $params = [])
+	public function __construct($name_menu, $params = [])
 	{
+		$tmp_params = [];
+		if(!empty($params)) {
+			foreach ($params as $key => $val) {
+				$tmp_params[$key] = $this->convertArrayToString($val);
+			}
+		}
 		$this->name_menu = $name_menu;
-		$str = __NAMESPACE__ . DIRECTORY_SEPARATOR . $name_menu . DIRECTORY_SEPARATOR . $name_menu;
-		$this->menu = new $str($params);
+		$str = "App\Menu\\" . $name_menu . "\\" . $name_menu;
+		$this->menu = new $str($tmp_params);
 	}
 
-	function renderView() {
+	public function renderView() {
 		return $this->menu->renderView();
+	}
+
+	public function convertArrayToString($arr) {
+		if(is_array($arr)) {
+			$imp = implode(" ", $arr);
+			return " " . $imp . " ";
+		}
+		return " " . $arr . " ";
 	}
 }

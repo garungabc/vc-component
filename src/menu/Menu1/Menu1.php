@@ -35,11 +35,26 @@ class Menu1 implements MenuInterface
                 'before'          => '',
                 'after'           => '',
             ];
-            echo '<div class="menu1">';
-            echo '<div class="main-menu">';
+            if(!empty($this->params['theme_location'])){
+                $args['theme_location'] = $this->params['theme_location'];
+            } 
+            if(!empty($this->params['items_wrap'])){
+                $args['items_wrap'] = $this->params['items_wrap'];
+            }
+            if(!empty($this->params['item_spacing'])){
+                $args['item_spacing'] = $this->params['item_spacing'];
+            }
+            if(!empty($this->params['walker'])){
+                $args['walker'] = $this->params['walker'];
+            }
+            if(!empty($this->params['depth'])){
+                $args['depth'] = $this->params['depth'];
+            }
+            echo "<div class='menu1 {$this->params["container_class"]}'>";
+            echo "<div class='main-menu {$this->params["container_class_2"]}'>";
             echo wp_nav_menu($args);
             echo '</div>';
-            echo '<div class="mobile-menu"></div>';
+            echo "<div class='mobile-menu {$this->params["container_class_mobile"]}'></div>";
             echo '</div>';
         }
     }
