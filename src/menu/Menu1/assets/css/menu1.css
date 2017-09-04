@@ -5,6 +5,14 @@
     position: relative;
 }
 
+.menu1 .main-menu ul {
+    padding-left: 0px;
+}
+
+.menu1 .main-menu ul li {
+    list-style-type: none;
+}
+
 .menu1 .main-menu > ul {
     display: -webkit-flex;
     justify-content: space-between;
@@ -125,4 +133,66 @@
     position: absolute;
     width: 100%;
     z-index: 999999;
+}
+
+/*mobile*/
+.menu1 .mean-container .mean-bar {
+    background: none;
+    left: 0;
+    position: absolute;
+    top: 3px;
+    z-index: 99;
+    max-width: 480px;
+}
+.menu1 .mean-container .mean-bar .meanmenu-reveal {
+    left: 0 !important;
+    top: 0;
+}
+.menu1 .mean-container .mean-bar .mean-nav {
+    background: $xanhdam none repeat scroll 0 0 !important;
+    margin-top: 45px;
+}
+.menu1 .mean-container .mean-nav ul li .mean-expand {
+    height: 14px;
+    line-height: 14px;
+    width: 20px;
+}
+.menu1 .mean-container .mean-nav ul li .mean-expand:hover {
+    background: rgba(255, 255, 255, 0.3) none repeat scroll 0 0;
+}
+.menu1 .mean-container .mean-nav ul li a {
+    padding: 10px 5%;
+    font-size: 13px;
+}
+.menu1 .mean-container .mean-nav ul li li a {
+    padding: 10px 10%;
+}
+.menu1 .mean-container .mean-nav ul li li li a {
+    width: 80%;
+}
+
+/*RESPONSIVE*/
+@media screen and (max-width:1199px) {
+    .menu1 .main-menu ul li a {
+        font-size: 12px;
+    }
+    .menu1 .main-menu ul ul li a {
+        padding: 10px 8px;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .menu1 {
+        height: 52px;
+    }
+}
+
+@media screen and (max-width:767px) {
+
+}
+
+@media screen and (max-width:480px) {
+    .menu1 .mean-container .mean-bar {
+        max-width: 100%;
+    }
 }

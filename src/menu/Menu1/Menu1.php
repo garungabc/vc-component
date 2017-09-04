@@ -39,6 +39,7 @@ class Menu1 implements MenuInterface
             echo '<div class="main-menu">';
             echo wp_nav_menu($args);
             echo '</div>';
+            echo '<div class="mobile-menu"></div>';
             echo '</div>';
         }
     }
@@ -51,6 +52,8 @@ class Menu1 implements MenuInterface
     public function enqueueScript()
     {
         wp_enqueue_script('menu1-scripts', $this->path_uri . '/menu1/assets/js/menu1.js', 'jquery', '1.0', true);
+
+        wp_localize_script('menu1-scripts', 'path_uri', $this->path_uri);
     }
 
     public function setupMenu()

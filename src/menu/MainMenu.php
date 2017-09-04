@@ -2,20 +2,19 @@
 
 namespace App\Menu;
 /**
-* Main Menu Class
+* MainMenu Class - Allows you to initialize a menu in the source
+* @author garung
+* @version 1.0
 */
 class MainMenu
 {
 	protected $name_menu = 'Menu1';
-	protected $params = [];
 	public $menu;
 	function __construct($name_menu, $params = [])
 	{
 		$this->name_menu = $name_menu;
-		$this->params = $params;
-		var_dump($name_menu . "\\" . $name_menu);
-		// $this->menu = new $name_menu . "\\" . $name_menu;
-		$this->menu = new Menu1\Menu1($this->params);
+		$str = __NAMESPACE__ . DIRECTORY_SEPARATOR . $name_menu . DIRECTORY_SEPARATOR . $name_menu;
+		$this->menu = new $str($params);
 	}
 
 	function renderView() {
